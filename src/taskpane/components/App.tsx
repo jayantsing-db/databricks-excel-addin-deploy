@@ -1,45 +1,20 @@
 import * as React from "react";
-import Header from "./Header";
-import HeroList, { HeroListItem } from "./HeroList";
-import TextInsertion from "./TextInsertion";
-import { makeStyles } from "@fluentui/react-components";
-import { Ribbon24Regular, LockOpen24Regular, DesignIdeas24Regular } from "@fluentui/react-icons";
-import { insertText } from "../taskpane";
+import { useEffect } from "react";
 
 interface AppProps {
   title: string;
 }
 
-const useStyles = makeStyles({
-  root: {
-    minHeight: "100vh",
-  },
-});
-
 const App: React.FC<AppProps> = (props: AppProps) => {
-  const styles = useStyles();
-  // The list items are static and won't change at runtime,
-  // so this should be an ordinary const, not a part of state.
-  const listItems: HeroListItem[] = [
-    {
-      icon: <Ribbon24Regular />,
-      primaryText: "Achieve more with Office integration",
-    },
-    {
-      icon: <LockOpen24Regular />,
-      primaryText: "Unlock features and functionality",
-    },
-    {
-      icon: <DesignIdeas24Regular />,
-      primaryText: "Create and visualize like a pro",
-    },
-  ];
+  useEffect(() => {
+    // Office JS is already ready at this point since this component is rendered after Office.onReady()
+    // Redirect to the Databricks dashboard
+    window.location.href = "https://e2-dogfood.staging.cloud.databricks.com/embed/dashboardsv3/01ef486a14151a3ca3dc14b667c9cec9?o=6051921418418893";
+  }, []);
 
   return (
-    <div className={styles.root}>
-      <Header logo="assets/logo-filled.png" title={props.title} message="Welcome" />
-      <HeroList message="Discover what this add-in can do for you today!" items={listItems} />
-      <TextInsertion insertText={insertText} />
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+      <p>Loading Databricks dashboard...</p>
     </div>
   );
 };
