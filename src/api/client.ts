@@ -7,7 +7,7 @@
 const isProduction = window.location.hostname !== 'localhost';
 const API_BASE_URL = isProduction
   ? '/api' // In production, use relative path
-  : 'http://localhost:3001/api'; // In development, use absolute URL to backend server
+  : 'https://localhost:3001/api'; // In development, use absolute URL to backend server
 
 /**
  * General fetch wrapper with error handling
