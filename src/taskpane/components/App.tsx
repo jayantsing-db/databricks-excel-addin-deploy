@@ -14,7 +14,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
 
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
-      <p>Loading Databricks dashboard...</p>
+      <p>{props.title} - Loading Databricks dashboard...</p>
     </div>
   );
 };
