@@ -19,6 +19,12 @@ Office.onReady(() => {
   );
 });
 
+// root?.render(
+//   <FluentProvider theme={webLightTheme}>
+//     <App title={title} />
+//   </FluentProvider>
+// );
+
 if ((module as any).hot) {
   (module as any).hot.accept("./components/App", () => {
     const NextApp = require("./components/App").default;
