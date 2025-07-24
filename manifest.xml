@@ -12,6 +12,7 @@
   <AppDomains>
     <AppDomain>https://www.contoso.com</AppDomain>
     <AppDomain>https://dbc-81e5ad6a-48db.dev.databricks.com</AppDomain>
+    <AppDomain>https://e2-dogfood.staging.cloud.databricks.com</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>

@@ -10,7 +10,7 @@ const App: React.FC<AppProps> = (props: AppProps) => {
   useEffect(() => {
     // Office JS is already ready at this point since this component is rendered after Office.onReady()
     // Redirect to the Databricks dashboard
-    window.location.href = "https://dbc-81e5ad6a-48db.dev.databricks.com/embed/dashboardsv3/01f05f5ae70b1a7d8b2c3a8059ed6d1a";
+    window.location.href = "https://e2-dogfood.staging.cloud.databricks.com/embed/dashboardsv3/01ef486a14151a3ca3dc14b667c9cec9?o=6051921418418893";
     insertText("Hello, world!");
   }, []);
 
